@@ -22,7 +22,7 @@ const NavbarItem = ({ href, children, isActive }: NavbarItemProps) => {
       asChild
       variant="outline"
       className={cn(
-        "bg-transparent hover:bg-transparent rounded-full hover:border-primary border-transparent px-3.5 text-lg",
+        "bg-transparent hover:bg-blue-800 rounded-full hover:border-primary border-transparent px-3.5 text-lg",
         isActive && "bg-white text-black hover:bg-white hover:text-black"
       )}
     >
@@ -63,6 +63,22 @@ export const Navbar = () => {
           </NavbarItem>
         ))}
       </div>
+        <div className="hidden lg:flex">
+            
+        <Button variant="secondary" className="border-l border-t-0 border-b-0 border-r-0 px-12 h-full rounded-none bg-white hover:bg-pink-400 transition-colors text-lg">
+            <Link href="/sign-in">
+            Login
+        </Link>
+        </Button>
+        <Button className="border-l border-t-0 border-b-0 border-r-0 px-12 h-full rounded-none bg-black text-white hover:bg-pink-400 hover:text-black transition-colors text-lg">
+            <Link href="/sign-up">
+
+            Star selling
+            </Link>
+            </Button>
+
+        </div>
+
     </nav>
   );
 };
