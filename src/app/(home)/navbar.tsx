@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import { Poppins } from "next/font/google";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Sidebar } from "./navbar-sdiebar";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -43,13 +44,19 @@ export const Navbar = () => {
   const pathname = usePathname();
 
   return (
+
+
     <nav className="h-20 flex border-b justify-between items-center px-6 font-medium bg-black text-white">
       {/* Logo */}
+           <div className="lg:hidden">
+        <Sidebar />
+</div>
       <Link href="/" className="flex items-center">
         <span className={cn("text-3xl font-semibold", poppins.className)}>
           funroad
         </span>
       </Link>
+ 
 
       {/* Navigation Items */}
       <div className="flex gap-4">
